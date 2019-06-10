@@ -1,0 +1,17 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/home/index/index",
+    "pages/home/category/category",
+    "pages/home/my/my",
+    "pages/home/shopcart/shopcart",
+    "pages/home/category/goodDetail/goodDetail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Hyan Fruit",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}

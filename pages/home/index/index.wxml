@@ -1,0 +1,91 @@
+<!-- pages/home/index/index.wxml -->
+<view class="container">
+  <van-search value='{{value}}' placeholder="请输入搜索关键词">
+    <view slot="action" bind:tap="onSearch">搜索</view>
+  </van-search>
+  <swiper indicator-dots="true" autoplay="true" circular="false">
+    <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="category-list">
+    <view class="list-item" wx:for="{{listType}}" wx:key="{{index}}" catch:tap="switchUrl(item.index)">
+      <image src="{{item.imgsrc}}" />
+      <view>{{item.text}}</view>
+    </view>
+  </view>
+  <van-notice-bar
+  left-icon="../../../resource/images/tongzhi.png"
+  text="周末大放送，周末大放送。   周末大放送，周末大放送。    周末大放送，周末大放送。   周末大放送，周末大放送。"
+/>
+  <view class='goods-list'>
+    <view class='goods-list-box'>
+      <view class="goods-list-title">
+        <view class="one-title">新品上架</view>
+        <view class="two-title">新品美味 抢先体验</view>
+        <view class="three-title fr">更多</view>
+      </view>
+      <view class="goods-list-cont">
+        <view class="goods-discript" wx:for="{{goodsList.newGoodsList}}" wx:key data-id='{{item.id}}' bindtap="switchDetail">
+          <view class="goods-img"><image src="{{item.picUrl}}"/></view>
+          <view class="goods-name">{{item.name}}</view>
+          <view class="goods-remark">{{item.brief}}</view>
+          <view class="goods-price">
+            <view class="price-num">￥{{item.retailPrice}}</view>
+            <view class='price-icon'>购</view>
+          </view>
+        </view>
+      </view> 
+    </view>
+
+    <view class='goods-list-box'>
+      <view class="goods-list-title">
+        <view class="one-title">人气推荐</view>
+        <view class="two-title">只能乐购 帮你选择</view>
+        <view class="three-title fr">更多</view>
+      </view>
+      <view class="goods-list-cont">
+        <view class="goods-discript" wx:for="{{goodsList.hotGoodsList}}" wx:key="{{index}}">
+          <view class="goods-img"><image src="{{item.picUrl}}"/></view>
+          <view class="goods-name">{{item.name}}</view>
+          <view class="goods-remark">{{item.brief}}</view>
+          <view class="goods-price">
+            <view class="price-num">￥{{item.retailPrice}}</view>
+            <view class='price-icon'>购</view>
+          </view>
+        </view>
+      </view> 
+    </view>
+
+    <view class='goods-list-box'>
+      <view class="goods-list-title">
+        <view class="one-title">今日特价</view>
+        <view class="two-title">优惠多多 抢先体验</view>
+        <view class="three-title fr">更多</view>
+      </view>
+      <view class="goods-list-cont">
+        <view class="goods-discript" wx:for="{{goodsList.floorGoodsList[0].goodsList}}" wx:key="{{index}}">
+          <view class="goods-img"><image src="{{item.picUrl}}"/></view>
+          <view class="goods-name">{{item.name}}</view>
+          <view class="goods-remark">{{item.brief}}</view>
+          <view class="goods-price">
+            <view class="price-num">￥{{item.retailPrice}}</view>
+            <view class='price-icon'>购</view>
+          </view>
+        </view>
+      </view> 
+    </view>
+    <view class='goods-list-box'>
+      <view class="goods-list-title">
+        <view class="one-title">乐购精选</view>
+        <view class="two-title">选你所爱 乐购生活</view>
+        <view class="three-title fr">更多</view>
+      </view>
+      <view class="goods-footer-img"><image src='{{goodsList.brandList[1].picUrl}}' /></view>
+      <view class="goods-footer-price"><view>{{goodsList.brandList[1].name}}</view><view>￥{{goodsList.brandList[1].floorPrice}}</view></view>
+    </view>
+  </view>
+  
+</view>

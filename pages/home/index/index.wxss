@@ -1,0 +1,120 @@
+/* pages/home/index/index.wxss */
+
+.slide-image {
+  width: 100vw;
+  height: 150px;
+}
+
+.category-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 30rpx 20rpx 30rpx;
+}
+
+.category-list .list-item image {
+  width: 80rpx;
+  height: 80rpx;
+  padding-bottom: 20rpx;
+}
+
+.category-list .list-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.category-list .list-item view {
+  font-size: 14px;
+}
+
+.goods-list {
+  margin: 40rpx 20rpx 140rpx;
+}
+
+.goods-list-title {
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  margin-bottom: 30rpx;
+}
+
+.goods-list-title .two-title {
+  font-size: 12px;
+  margin-left: 10rpx;
+  vertical-align: bottom;
+}
+
+.goods-list-title .three-title {
+  position: absolute;
+  right: 10rpx;
+}
+
+.goods-list-cont {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.goods-list-box {
+  margin-bottom: 30rpx;
+}
+
+.goods-discript {
+  width: 30%;
+  font-size: 12px;
+  margin-bottom: 20rpx;
+}
+
+.goods-discript .goods-img image {
+  width: 100%;
+  height: 200rpx;
+  border-radius: 5%;
+}
+
+.goods-discript .goods-name {
+  height: 80rpx;
+}
+
+.goods-discript .goods-remark {
+  height: 40rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.goods-price {
+  display: flex;
+  justify-content: space-between;
+}
+
+.goods-discript .price-num {
+  color: red;
+  font-weight: bold;
+}
+
+.goods-discript .price-icon {
+  width: 35rpx;
+  height: 35rpx;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 35rpx;
+  border: 1px solid red;
+  color: red;
+  font-size: 10px;
+}
+
+.goods-footer-img image {
+  width: 100%;
+  height: 400rpx;
+  border-radius: 3%;
+}
+
+.goods-footer-price {
+  display: flex;
+  justify-content: space-between;
+}
+
+.goods-footer-price view:nth-child(2) {
+  color: red;
+}

@@ -1,0 +1,13 @@
+<!--pages/home/shopcart/shopcart.wxml-->
+<scroll-view class="shopcart-content">
+
+  <view class="shopcart-list" wx:for="{{goods}}" wx:key="unique">
+    <van-checkbox value="{{ true }}" bind:change="onChange"></van-checkbox>
+    <van-card num="{{item.num}}" price="{{item.price}}" desc="{{item.desc}}" title="{{item.title}}" thumb="{{ item.imageURL }}" thumb-mode="scaleToFill" custom-class="goods-card" title-class="goods-title" price-class="goods-price">
+    </van-card>
+  </view>
+</scroll-view>
+
+<van-submit-bar price="{{ totalPrice }}" button-text="提交订单" bind:submit="onSubmit" custom-class="shopcart-footer-bar">
+ <van-checkbox v-model="checked" custom-class="allselect-btn">全选</van-checkbox>
+ </van-submit-bar>

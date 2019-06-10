@@ -1,0 +1,29 @@
+<!--pages/home/category/category.wxml-->
+<view class="container">
+  <van-search value='{{value}}' placeholder="请输入搜索关键词" custom-class="search-box">
+    <view slot="action" bind:tap="onSearch">搜索</view>
+  </van-search>
+
+  <view class="middle-box" >
+    <scroll-view class="middle-box-left" scroll-y="true" scroll-with-animation="true">
+      <view wx:for="{{catalogList.categoryList}}" wx:key="{{item.id}}" class="{{item.id==currentCategoryTd?'active':''}}" data-id="{{item.id}}" bindtap='switchTab'>{{item.name}}</view>
+    </scroll-view>
+    <scroll-view class="middle-box-right" scroll-y="true" style="height:{{height}}px;width:{{width}}px">
+    
+      <view class="right-item" wx:for="{{currentgoodsList}}" wx:key >
+        <view>
+          <image src="{{item.picUrl}}" />
+        </view>
+        <view style="width:{{rightWidth}}px">
+          <view class="item-name">{{item.name}}</view>
+          <view class="item-brief">{{item.brief}}</view>
+          <view class="item-price">
+            <view>￥{{item.retailPrice}}</view>
+            <view>立即购</view>
+          </view>
+        </view>
+      </view>
+    
+    </scroll-view>
+  </view>
+</view>

@@ -1,0 +1,77 @@
+/* pages/home/category/category.wxss */
+
+
+.middle-box {
+  display: flex;
+}
+
+.middle-box .middle-box-left {
+  width: 90px;
+  background: #dadada;
+}
+
+.middle-box .middle-box-left view {
+  height: 80rpx;
+  width: 90px;
+  line-height: 80rpx;
+  text-align: center;
+}
+
+.middle-box .middle-box-left view.active {
+  background: #fff;
+  border-left: 2px solid #07c160;
+}
+
+.middle-box .middle-box-left view.active::before {
+  height: 100%;
+  border-left: 2px solid #07c160;
+}
+
+.middle-box .middle-box-right {
+  flex: 1;
+}
+
+.middle-box .middle-box-right .right-item {
+  display: flex;
+  width: 100%;
+  font-size: 12px;
+  height: 180rpx;
+  margin-bottom: 40rpx;
+  margin-left: 10px;
+}
+
+.middle-box .middle-box-right .right-item image {
+  width: 80px;
+  height: 80px;
+}
+
+.middle-box .middle-box-right .right-item .item-name {
+  height: 80rpx;
+}
+
+.middle-box .middle-box-right .right-item .item-brief {
+  height: 40rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.middle-box .middle-box-right .right-item .item-price {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.middle-box .middle-box-right .right-item .item-price view:nth-child(1) {
+  color: red;
+}
+
+.middle-box .middle-box-right .right-item .item-price view:nth-child(2) {
+  color: #fff;
+  background: red;
+  width: 110rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  text-align: center;
+  border-radius: 10%;
+}

@@ -1,0 +1,97 @@
+<!-- pages/home/category/goodDetail/goodDetail.wxml -->
+<view class='detail-container'>
+  <swiper indicator-dots="true" autoplay="true" circular="false" indicator-color="#07c160">
+    <block wx:for="{{goodsDetail.info.gallery}}" wx:key="{{index}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class='detail-middle'>
+    <view class='detail-title'>
+      <view>{{goodsDetail.info.name}}</view>
+      <view class='share-box'>
+        <van-icon name="share" color="#07c160"></van-icon>
+        <view>分享</view>
+      </view>
+    </view>
+    <view class='detail-remark'>{{goodsDetail.info.brief}}</view>
+    <view class='detail-price'>
+      <text>￥{{goodsDetail.info.retailPrice}}</text>
+      <text>￥{{goodsDetail.info.counterPrice}}</text>
+    </view>
+    <view class='detail-info'>
+      <view class="detail-delivery" bindtap='onChoice'>
+        <view>选择</view>
+        <view>规格：{{specification}}</view>
+        <view>数量：{{ goodsCount }}</view>
+        <view class='btn-link'>＞</view>
+      </view>
+      <view class="detail-delivery">
+        <view>配送</view>
+        <view>校乐派 10元起送</view>
+        <view class='btn-link'>＞</view>
+      </view>
+    </view>
+    <view class='detail-shop'>
+      <view class="shop-img">
+        <image src="{{goodsDetail.brand.picUrl}}" style="width:50px; height:40px;"></image>
+      </view>
+      <view class="shop-name">
+        <view>{{goodsDetail.brand.name}}</view>
+        <view>
+          <view>
+            <image src="../../../../resource/images/ren.png" style="width:15px; height:15px;" />
+            店铺认证
+          </view>
+          <view>
+            <image src="../../../../resource/images/ren.png" style="width:15px; height:15px;" />
+            担保交易
+          </view>
+          <view>
+            <image src="../../../../resource/images/ren.png" style="width:15px; height:15px;" />
+            支持售后
+          </view>
+        </view>
+      </view>
+      <view class="shop-enter-btn">进店</view>
+    </view>
+    <van-popup show="{{ choiceShow }}" position="bottom" bind:close="onClose">
+      <view class="popuo-close-btn" bind:tap="onClose">X</view>
+      <view class="popup-goods-img">
+        <view>
+          <image src="{{goodsDetail.info.gallery[0]}}" />
+        </view>
+        <view>
+          <view>
+            价格：
+            <text>¥{{goodsOnePrice}}</text>
+          </view>
+          <view>{{specification}}</view>
+        </view>
+      </view>
+      <view class="popup-goods-dw">
+        <view>
+          {{goodsDetail.specificationList[0].name}}
+          <text>(剩余{{remainNum}}个)</text>
+        </view>
+        <view>
+          <view wx:for="{{goodsDetail.productList}}" wx:key data-id="{{item.id}}" bind:tap="choiceSpecification" class="{{specificationId==item.id?'active':''}}">
+            {{item.specifications}}
+          </view>
+        </view>
+      </view>
+      <view class="popup-goods-num">
+        <view>数量</view>
+        <van-stepper value="{{ goodsCount }}" bind:change="onChangeNum" />
+      </view>
+    </van-popup>
+  </view>
+  <van-goods-action custom-class="goods-footer">
+    <van-goods-action-icon icon="chat-o" text="客服" bind:click="onClickchat" />
+    <van-goods-action-icon icon="star-o" text="收藏" bind:click="onClickstar" />
+    <van-goods-action-icon icon="cart-o" text="购物车" info="5" bind:click="onClickcart" />
+    <van-goods-action-button text="加入购物车" type="warning" bind:click="onClickAddCart" />
+    <van-goods-action-button text="立即购买" bind:click="onClickPay" />
+  </van-goods-action>
+</view>

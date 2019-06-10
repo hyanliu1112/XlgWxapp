@@ -1,0 +1,15 @@
+<!--index.wxml-->
+
+<!-- 页面 -->
+<home wx:if="{{active == 0}}" />
+<category wx:if="{{active == 1}}" />
+<shopcart wx:if="{{active == 2}}" />
+<my wx:if="{{active == 3}}" />
+
+<!-- 导航 -->
+<van-tabbar active="{{ active }}" active-color="#07c160" fixed bind:change="switchTabar">
+  <van-tabbar-item icon="wap-home">首页</van-tabbar-item>
+  <van-tabbar-item icon="apps-o">分类</van-tabbar-item>
+  <van-tabbar-item icon="cart-o" info="99">购物车</van-tabbar-item>
+  <van-tabbar-item icon="user-o" dot>我的</van-tabbar-item>
+</van-tabbar>

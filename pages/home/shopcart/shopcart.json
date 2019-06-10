@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-card": "/dist/card/index",
+    "van-stepper": "/dist/stepper/index",
+    "van-submit-bar": "/dist/submit-bar/index",
+    "van-checkbox": "/dist/checkbox/index",
+    "van-checkbox-group": "/dist/checkbox-group/index"
+  }
+}

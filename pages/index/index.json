@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "van-tabbar": "/dist/tabbar/index",
+    "van-tabbar-item": "/dist/tabbar-item/index",
+    "home": "../home/index/index",
+    "category": "../home/category/category",
+    "shopcart": "../home/shopcart/shopcart",
+    "my": "../home/my/my"
+  },
+  "component": true
+}

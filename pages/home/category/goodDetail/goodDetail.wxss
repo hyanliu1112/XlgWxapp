@@ -1,0 +1,36 @@
+/* pages/home/category/goodDetail/goodDetail.wxss */
+.detail-container swiper{ height: 300px;}
+.detail-container .slide-image{ width: 100%; height: 100%;}
+.detail-middle { margin: 10px 0 90px 0;}
+.detail-middle .detail-title{ display: flex; justify-content: space-between;margin: 0px 10px;}
+.detail-middle .detail-title>view:nth-child(1){ flex: 1;} 
+.detail-middle .detail-title .share-box{ display: flex; flex-direction: column; align-items: center;}
+.detail-middle .detail-title .share-box >view { font-size: 12px;}
+.detail-middle .detail-remark{ font-size: 12px; color: #666; margin: 5px 10px;}
+.detail-middle .detail-price{ margin: 0px 10px;}
+.detail-middle .detail-price text:nth-child(1){ color: red; font-weight: bold;}
+.detail-middle .detail-price text:nth-child(2){ text-decoration: line-through; font-size: 13px;}
+.detail-info { padding: 10px 0px; background: #f8f9fa;}
+.detail-info .detail-delivery{ display: flex; align-items: center; background: #fff; height: 80rpx; padding: 0px 10px; border-bottom: 1px solid #f8f9fa;}
+.detail-info .detail-delivery>view{ margin-right: 20rpx;}
+.detail-info .detail-delivery .btn-link{ position: absolute; right: 0;}
+
+.detail-middle .detail-shop{ display: flex; margin: 10px; align-items: center;}
+.detail-middle .detail-shop .shop-name{ flex: 1; margin-left: 10px;}
+.detail-middle .detail-shop .shop-name>view:nth-child(2){ display: flex; font-size: 12px;}
+.detail-middle .detail-shop .shop-name>view:nth-child(2)>view{ display: flex; align-items: center; margin-right: 4px;}
+.detail-middle .shop-enter-btn{ border:1px solid #07c160; border-radius: 25px; font-size: 13px; padding:2px 5px; color:#07c160;}
+.popuo-close-btn{ position: absolute; right: 10px; top: 10px; color: #666;}
+
+.popup-goods-img{ display: flex; margin: 10px;}
+.popup-goods-img image{ width: 70px; height: 70px; border-radius: 15px;}
+.popup-goods-img>view:nth-child(2){  margin-left: 10px;}
+.popup-goods-img>view:nth-child(2) text{color: red; font-weight: bold;}
+.popup-goods-dw>view{ margin-bottom: 10px; margin-left: 10px;}
+.popup-goods-dw>view text{ font-size: 12px; color: #666;}
+.popup-goods-dw>view:nth-child(2){ display: flex; align-items: center; justify-content: flex-start;}
+.popup-goods-dw>view:nth-child(2) view{ padding: 5px; margin-right: 10px;  border: 1px solid #07c160; color: #07c160; border-radius: 5px;}
+.popup-goods-dw>view:nth-child(2) view.active{ background: #07c160; color: #fff;}
+.popup-goods-num{ margin-left: 10px; margin-bottom: 70px;}
+.popup-goods-num>view{ margin-bottom: 10px;}
+.goods-footer{ z-index: 1000;}
