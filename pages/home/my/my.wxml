@@ -1,2 +1,18 @@
 <!--pages/home/my/my.wxml-->
-<text>pages/home/my/my.wxml</text>
+<view class='my-avator'>
+    <view wx:if="{{canIUse}}" >
+        <view class='header'>
+            <image src='../../../resource/images/avator.jpg'></image>
+        </view>
+        <button class='bottom' type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">
+            点击登录
+        </button>
+    </view>
+    <view wx:else>请升级微信版本</view>
+</view>
+ 
+<view class='my-content'>
+    <view><view>优惠券</view><view>浏览足记</view><view>优惠券</view><view>优惠券</view></view>
+</view>
+
+
